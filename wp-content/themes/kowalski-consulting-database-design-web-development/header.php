@@ -32,7 +32,7 @@
 
 
 <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/KC-logo.jpg">
-
+<link rel="alternate" href="https://kowalski-consulting.com" hreflang="pl-pl" />
 
 
 <!-- Google Tag Manager -->
