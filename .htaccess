@@ -776,6 +776,8 @@ ServerSignature Off
 
     ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
 
+
+
 </IfModule>
 
 # BEGIN WordPress
@@ -794,3 +796,6 @@ RewriteRule . /wp-vs-581/index.php [L]
 </IfModule>
 
 # END WordPress
+
+RewriteEngine On
+RewriteRule .* - [E=Cache-Control:no-cache]

@@ -465,14 +465,14 @@ function add_my_custom_post_type( $query ) {
     return $query;
 }
 
-add_action('wp_head', 'ad_hreflang_link'); 
+
 function ad_hreflang_link(){ 
- global $post; 
- if(!empty($post)){ 
-    $alternate = get_post_meta($post->ID, 'alternate', true); 
-    $hreflang = get_post_meta($post->ID, 'hreflang', true); 
+
+    $alternate = get_site_url(); 
+    $hreflang = 'pl-pl'; 
     if(!empty($alternate) && !empty($hreflang)){?> 
        <link rel="alternate" href="<?php echo $alternate; ?>" hreflang="<?php echo $hreflang; ?>" /><?php 
-    } 
+    
   } 
  } 
+ add_action('wp_head', 'ad_hreflang_link'); 
